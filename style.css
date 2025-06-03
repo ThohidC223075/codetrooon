@@ -30,10 +30,6 @@ body {
   color: #ffffff;
 }
 
-.logo .highlight {
-  color: #dc3545;
-}
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -49,6 +45,14 @@ body {
 
 .nav-links li a:hover {
   color: #ffc107;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 /* Hero Section */
@@ -85,7 +89,7 @@ body {
 }
 
 .hero button:hover {
-  background-color: #28a745;
+  background-color: #218838;
 }
 
 /* Section Styles */
@@ -133,13 +137,6 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Testimonials */
-.testimonials {
-  background-color: #f1f1f1;
-  padding: 2rem;
-  border-radius: 10px;
-}
-
 /* Contact */
 .contact form {
   max-width: 500px;
@@ -180,7 +177,24 @@ footer {
   font-size: 0.9rem;
 }
 
-.green-letter {
-  color: #2e7d32;
-  font-weight: bold;
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #28a745;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
